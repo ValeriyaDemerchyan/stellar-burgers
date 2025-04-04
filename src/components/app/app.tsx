@@ -24,6 +24,7 @@ import { useDispatch } from '../../services/store';
 import { useEffect } from 'react';
 import { getIngredients } from '../../services/slices/ingredientSlice';
 import { getUser } from '../../services/slices/userSlice';
+import { FeedModal } from '../feed-modal';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -96,7 +97,7 @@ const App = () => {
           path='/profile/orders/:number'
           element={
             <ProtectedRoute>
-              <ProfileOrders />
+              <OrderInfo />
             </ProtectedRoute>
           }
         />
@@ -105,14 +106,7 @@ const App = () => {
 
       {background && (
         <Routes>
-          <Route
-            path='/feed/:number'
-            element={
-              <Modal title={'Информация о заказе'} onClose={() => navigate(-1)}>
-                <OrderInfo />
-              </Modal>
-            }
-          />
+          <Route path='/feed/:number' element={<FeedModal />} />
           <Route
             path='/ingredients/:id'
             element={
@@ -121,14 +115,7 @@ const App = () => {
               </Modal>
             }
           />
-          <Route
-            path='/profile/orders/:number'
-            element={
-              <Modal title={'Информация о заказе'} onClose={() => navigate(-1)}>
-                <OrderInfo />
-              </Modal>
-            }
-          />
+          <Route path='/profile/orders/:number' element={<FeedModal />} />
         </Routes>
       )}
     </div>
