@@ -7,7 +7,7 @@ export const getIngredients = createAsyncThunk(
   getIngredientsApi
 );
 
-type TIngredientState = {
+export type TIngredientState = {
   ingredients: TIngredient[];
   buns: TIngredient[];
   mains: TIngredient[];
