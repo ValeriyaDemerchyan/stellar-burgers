@@ -1,5 +1,6 @@
 describe('Тестирование добавления ингредиентов в конструктор', () => {
   beforeEach(() => {
+    cy.viewport(1280, 1024);
     cy.intercept('GET', '/api/ingredients', { fixture: 'ingredients.json' }).as(
       'getIngredients'
     );
@@ -46,6 +47,7 @@ describe('Тестирование добавления ингредиентов
 
 describe('Тестирование работы модального окна для ингредиента', () => {
   beforeEach(() => {
+    cy.viewport(1280, 1024);
     cy.intercept('GET', '/api/ingredients', { fixture: 'ingredients.json' }).as(
       'getIngredients'
     );
@@ -77,6 +79,7 @@ describe('Тестирование работы модального окна д
 
 describe('Тестирование создания заказа', () => {
   beforeEach(() => {
+    cy.viewport(1280, 1024);
     cy.intercept('GET', '/api/ingredients', { fixture: 'ingredients.json' }).as(
       'getIngredients'
     );
