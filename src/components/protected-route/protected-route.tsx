@@ -2,7 +2,7 @@ import { useSelector } from '../../services/store';
 import {
   getIsAuthCheckedSelector,
   getUserSelector
-} from '../../services/slices/userSlice';
+} from '../../services/slices/user/userSlice';
 import { Navigate, useLocation } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { Preloader } from '@ui';

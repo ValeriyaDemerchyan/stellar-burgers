@@ -7,7 +7,7 @@ export const getOrder = createAsyncThunk('orders/getOrders', async () => {
   return orders;
 });
 
-type TUserState = {
+export type TUserState = {
   orders: TOrder[];
 };
 

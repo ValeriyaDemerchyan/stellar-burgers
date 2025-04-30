@@ -22,8 +22,8 @@ import {
 } from '@components';
 import { useDispatch } from '../../services/store';
 import { useEffect } from 'react';
-import { getIngredients } from '../../services/slices/ingredientSlice';
-import { getUser } from '../../services/slices/userSlice';
+import { getIngredients } from '../../services/slices/ingredients/ingredientSlice';
+import { getUser } from '../../services/slices/user/userSlice';
 import { FeedModal } from '../feed-modal';
 
 const App = () => {
